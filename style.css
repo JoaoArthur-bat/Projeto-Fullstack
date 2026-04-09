@@ -65,3 +65,16 @@ h2{
  button:hover {
     background-color: #219150;
 }
+select {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    background-color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+select:focus {
+    border-color: #27ae60;
+}
