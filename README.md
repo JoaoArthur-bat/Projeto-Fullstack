@@ -1,5 +1,4 @@
 # Projeto-Fullstack
 Desenvolvendo um dashboard financeiro
 
-
-Falta colocar um banco de dados e assim melhorar o projeto.
+Vou aprimorar primeiro a parte do projeto como todo depois vou vincular a um banco de dados.
