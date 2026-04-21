@@ -78,3 +78,36 @@ select {
 select:focus {
     border-color: #27ae60;
 }
+
+/* aqui é o estilo do extrato */
+#historico {
+    margin-top: 30px;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+#lista-transacoes {
+    list-style: none; /* Tira aquelas bolinhas feias da lista */
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#lista-transacoes li {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between; /* Empurra o nome pra esquerda e valor pra direita */
+    border-left: 5px solid gray; /* Borda padrão */
+}
+
+/* Classes dinâmicas que o JS vai usar */
+.item-entrada {
+    border-left-color: #27ae60 !important; /* Verde */
+}
+
+.item-saida {
+    border-left-color: #e74c3c !important; /* Vermelho */
+}
