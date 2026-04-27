@@ -87,7 +87,7 @@ select:focus {
 }
 
 #lista-transacoes {
-    list-style: none; /* Tira aquelas bolinhas feias da lista */
+    list-style: none; 
     margin-top: 15px;
     display: flex;
     flex-direction: column;
@@ -99,15 +99,14 @@ select:focus {
     padding: 10px;
     border-radius: 5px;
     display: flex;
-    justify-content: space-between; /* Empurra o nome pra esquerda e valor pra direita */
-    border-left: 5px solid gray; /* Borda padrão */
+    justify-content: space-between; 
+    border-left: 5px solid gray; 
 }
 
-/* Classes dinâmicas que o JS vai usar */
 .item-entrada {
-    border-left-color: #27ae60 !important; /* Verde */
+    border-left-color: #27ae60 !important; 
 }
 
 .item-saida {
-    border-left-color: #e74c3c !important; /* Vermelho */
+    border-left-color: #e74c3c !important; 
 }
