@@ -52,6 +52,7 @@ function atualizarSaldo() {
 }
 
 function zerarTudo(){
+
     const desejaApagar = confirm ("Atenção! Isso vai apagar todo o seu saldo e histórico. Tem certeza que deseja continuar?");
     
     if (desejaApagar === false){
@@ -62,5 +63,5 @@ function zerarTudo(){
     localStorage.removeItem('saldoUsuario');
     listaTransacoes.innerHTML = "";
 }
-
+botaoReset.addEventListener("click", zerarTudo);
 botaoAdicionar.addEventListener("click", atualizarSaldo);
