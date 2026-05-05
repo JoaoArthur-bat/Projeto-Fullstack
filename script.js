@@ -1,6 +1,8 @@
 console.log("O JavaScript foi carregado com sucesso!");
 
-const botaoAdicionar = document.querySelector('button');
+// Substitua o const botaoAdicionar por estes dois:
+const botaoAdicionar = document.querySelector('#btn-registrar');
+const botaoReset = document.querySelector('#btn-reset'); 
 const inputDescricao = document.querySelector('input[type="text"]');
 const inputValor = document.querySelector('input[type="number"]');
 const displaySaldo = document.querySelector('#balance h2');
@@ -47,6 +49,18 @@ function atualizarSaldo() {
     inputDescricao.value = "";
     inputValor.value = "";
     inputDescricao.focus();
+}
+
+function zerarTudo(){
+    const desejaApagar = confirm ("Atenção! Isso vai apagar todo o seu saldo e histórico. Tem certeza que deseja continuar?");
+    
+    if (desejaApagar === false){
+        return;
+    }
+    saldoTotal = 0;
+    displaySaldo.innerHTML= `Saldo Atual : R$ 0.00`;
+    localStorage.removeItem('saldoUsuario');
+    listaTransacoes.innerHTML = "";
 }
 
 botaoAdicionar.addEventListener("click", atualizarSaldo);

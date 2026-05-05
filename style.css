@@ -110,3 +110,12 @@ select:focus {
 .item-saida {
     border-left-color: #e74c3c !important; 
 }
+
+#btn-reset {
+    background-color: #e74c3c;
+}
+
+#btn-reset:hover {
+    background-color: #c0392b;
+}
+
