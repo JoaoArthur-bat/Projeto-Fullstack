@@ -1,6 +1,5 @@
 console.log("O JavaScript foi carregado com sucesso!");
 
-// Substitua o const botaoAdicionar por estes dois:
 const botaoAdicionar = document.querySelector('#btn-registrar');
 const botaoReset = document.querySelector('#btn-reset'); 
 const inputDescricao = document.querySelector('input[type="text"]');
@@ -63,5 +62,6 @@ function zerarTudo(){
     localStorage.removeItem('saldoUsuario');
     listaTransacoes.innerHTML = "";
 }
+
 botaoReset.addEventListener("click", zerarTudo);
 botaoAdicionar.addEventListener("click", atualizarSaldo);
