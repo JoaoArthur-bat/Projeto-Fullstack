@@ -6,14 +6,30 @@ const inputDescricao = document.querySelector('input[type="text"]');
 const inputValor = document.querySelector('input[type="number"]');
 const displaySaldo = document.querySelector('#balance h2');
 const selectTipo = document.querySelector('#tipo-transacao');
-
 const listaTransacoes = document.querySelector('#lista-transacoes');
+
+
 
 let saldoSalvo = localStorage.getItem('saldoUsuario');
 let saldoTotal = saldoSalvo ? parseFloat(saldoSalvo) : 0;
 
+let histórico = JSON.parse(localStorage.getItem('historicoTransacoes')) || [];
 displaySaldo.innerHTML = `Saldo Atual: R$ ${saldoTotal.toFixed(2)}`;
 
+function carregarExtrato(){
+    listaTransacoes.innerHTML = "";
+
+    historico.forEach(function(transacao) {
+        const novoItem = document.createElement('li');
+        novoItem.innerHTML = `<span>${transacao.descricao}</span> <span>R$ ${transacao.valor.toFixed(2)}</span>`;
+if (transacao.tipo === "entrada") {
+    novoItem.classList.add ('item-entrada');
+} else {
+    novoItem.classList.add('item-saida');
+}
+listaTransacoes.appendChild(novoItem);
+    });
+}
 function atualizarSaldo() {
     const descricao = inputDescricao.value;
     const valorDigitado = parseFloat(inputValor.value);
